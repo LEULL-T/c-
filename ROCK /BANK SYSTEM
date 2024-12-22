@@ -1,0 +1,72 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void showbalance(double balance);
+double deposit();
+double withdraw(double balance);
+
+
+int main(){
+    double balance=0;
+    int choice=0;
+
+do  
+
+        {cout<<"#######################"<<endl;
+        cout<<"enter our choice"<<endl;
+        cout<<"#######################"<<endl;
+        cout<<"1. show my balance"<<endl;
+        cout<<"2. deposite my money"<<endl;
+        cout<<"3. withdraw my money"<<endl;
+        cout<<"4. EXIT"<<endl;
+         cin>>choice;
+ 
+ switch (choice)
+    {case 1: showbalance(balance);
+            break;
+    case 2:balance+= deposit();
+          showbalance(balance);
+          break;
+    case 3: balance-=withdraw(balance);
+          showbalance(balance);
+          break;
+    case 4:
+    cout <<"thanks for visiting us!"<<endl;
+    default:
+      cout<<"INVALID NUMBER";}
+ }
+
+
+while(choice > 4);
+return 0;}
+
+void showbalance(double balance)
+{cout<<"your balance is: $"<<balance<<endl;
+return 0;}
+double deposit() 
+ {  double deposit=0;
+    cout<<"enter the amout of the deposit:  $"<<endl;
+    cin>>deposit;
+    if (deposit > 0)
+     {
+        return deposit;
+        }
+         else if 
+         {  cout<<"that is not valid";
+              return 0;}
+              
+              }
+        
+
+double withdraw(double balance){
+    {double withdraw =0;
+    cout<<"enter the amout to be withdraw:  $"<<endl;
+    cin>>withdraw; }
+    if(withdraw > balance)
+      cout<<"insseficent amount";
+      return 0;
+      else if  (withdraw < 0)
+        cout<<"that is not valid number";
+        return 0;
+         }
